@@ -16,6 +16,24 @@
 /* ==========================================================================
 	Global Styles
 ========================================================================== */
+
+    .maps {
+        position: relative;
+        padding-bottom: 400px; 
+        height: 0;
+        overflow: hidden;
+        margin-bottom:50px;
+    }
+    .maps iframe {
+        
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+
 a {
 	color: #E04343;
 	-webkit-transition:all 0.5s;
@@ -26,6 +44,21 @@ a {
 	outline:none!important;
 }
 a:hover,a:focus,a:active {
+	color:#0D0D0D;
+	text-decoration:none;
+	outline:none!important;
+}
+
+.clr a:focus {
+	color: #E04343;
+	-webkit-transition:all 0.5s;
+	-moz-transition:all 0.5s;
+	-o-transition:all 0.5s;
+	transition:all 0.5s;
+	border-bottom: 1px dashed;
+	outline:none!important;
+}
+.clr a:hover,a:focus,a:active {
 	color:#0D0D0D;
 	text-decoration:none;
 	outline:none!important;
@@ -398,7 +431,7 @@ table {
   padding-top: 20px;
   padding-left: 190px;
   width: 380px;
-  height: 250px;
+  /*height: 250px;*/
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-size: 20px;
@@ -499,15 +532,17 @@ table {
   position: fixed;
   text-align: center;
   border-radius: 100px;
-  background-color: #3DCC8E;
+  background-color: #29166f;
   cursor: pointer;
-  box-shadow: 0 0 0 rgba(0, 0, 0, 0.12), 3px 4px 8px 0px rgba(0, 0, 0, 0.11);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.12), 10px 10px 10px 10px rgba(0, 0, 0, 0.11);
   -webkit-transition: all .8s;
   transition: all .8s;
+  z-index:2;
+  
 }
 
 #top-btn:hover {
-  background-color: #1aa469;
+  background-color: #29166f;
 }
 
 #top-btn:hover i {
@@ -1212,6 +1247,19 @@ ul.slides li {
 }
 }
 
+
+@media screen and (max-width: 560px) and (min-width: 415px) {
+	.scrollto {
+		padding: 95px 0px 0px 0px;
+	}
+
+	.hero h1 {
+		font-size: 80px;
+		line-height: 80px;
+		margin-top: 65px;
+}
+}
+
 /*@media screen and (max-width:320px){*/
 /*    .hero h1{*/
 /*        font-size: 60px;*/
@@ -1234,6 +1282,7 @@ ul.slides li {
 	.wp2,.wp4,.wp5,.light-box {
 		margin-bottom: 30px;
 	}
+	
 }
 /* xGA iPad */
 @media screen and (max-width:1024px) {
